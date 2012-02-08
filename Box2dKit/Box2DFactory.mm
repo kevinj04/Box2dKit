@@ -26,7 +26,7 @@ static b2World *world;
 	bodyDef.type = b2_dynamicBody;
     
     CGPoint p = [element position];  
-    CGRect r = [element boundingBox];
+    CGRect r = [element boundary];
     
     float ratio = [Box2DHelper pixelsToMeterRatio];
     
