@@ -1523,6 +1523,7 @@
 				HEADER_SEARCH_PATHS = "./**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /../box2dModule;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -1541,6 +1542,7 @@
 				HEADER_SEARCH_PATHS = "./**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /../box2dModule;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
@@ -1566,6 +1568,7 @@
 				0ACB9A8414E2FE3A00528DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ACB9A9114E2FE6E00528DE7 /* Build configuration list for PBXNativeTarget "box2dModule" */ = {
 			isa = XCConfigurationList;
@@ -1574,6 +1577,7 @@
 				0ACB9A9314E2FE6E00528DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
