@@ -12,6 +12,6 @@
 @protocol Box2DPhysicsProtocol <NSObject>
 
 - (CGPoint) position;
-- (CGRect) boundingBox;
+- (CGRect) boundary;
 
 @end
