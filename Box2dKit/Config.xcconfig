@@ -1,0 +1,23 @@
+//
+//  Config.xcconfig
+//  Box2dKit
+//
+//  Created by Kevin Jenkins on 2/8/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+//
+
+HEADERS_FOLDER_PATH           = /../Box2dKit
+PRIVATE_HEADERS_FOLDER_PATH   = $(HEADERS_FOLDER_PATH)$(BASE_PRODUCT_NAME)/private
+PUBLIC_HEADERS_FOLDER_PATH    = $(HEADERS_FOLDER_PATH)$(BASE_PRODUCT_NAME)
+
+// Don't include the UserInput libraries in the archive. This makes it possible to build IPAs in Xcode 4.
+SKIP_INSTALL = YES
+
+// Warning flags
+GCC_WARN_CHECK_SWITCH_STATEMENTS        = NO
+GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = YES
+GCC_WARN_SHADOW                         = YES
+GCC_WARN_ABOUT_MISSING_NEWLINE          = YES
+GCC_WARN_UNUSED_FUNCTION                = YES
+GCC_WARN_UNUSED_LABEL                   = YES
