@@ -25,8 +25,8 @@ static b2World *world;
     b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
     
-    double xOffset = ([element anchorPoint].x - 0.5f) * [element boundary].size.width;
-    double yOffset = ([element anchorPoint].y - 0.5f) * [element boundary].size.height;
+    double xOffset = ([element anchorPoint].x - 0.5f) * [element boundary].size.width/2.0;
+    double yOffset = ([element anchorPoint].y - 0.5f) * [element boundary].size.height/2.0;
     CGPoint offsetAP = CGPointMake(xOffset, yOffset);
     
     CGPoint p = CGPointMake([element position].x - offsetAP.x, 
