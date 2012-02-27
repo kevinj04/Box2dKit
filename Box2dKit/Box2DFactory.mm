@@ -29,8 +29,8 @@ static b2World *world;
     double yOffset = ([element anchorPoint].y - 0.5f) * [element boundary].size.height;
     CGPoint offsetAP = CGPointMake(xOffset, yOffset);
     
-    CGPoint p = CGPointMake([element position].x + offsetAP.x, 
-                            [element position].y + offsetAP.y);//[element position];
+    CGPoint p = CGPointMake([element position].x - offsetAP.x, 
+                            [element position].y - offsetAP.y);//[element position];
     CGRect r = [element boundary];
     
     float ratio = [Box2DHelper pixelsToMeterRatio];
