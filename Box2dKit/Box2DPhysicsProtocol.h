@@ -13,5 +13,6 @@
 
 - (CGPoint) position;
 - (CGRect) boundary;
+- (CGPoint) anchorPoint;
 
 @end

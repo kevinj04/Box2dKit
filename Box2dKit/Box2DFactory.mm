@@ -25,7 +25,12 @@ static b2World *world;
     b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
     
-    CGPoint p = [element position];  
+    double xOffset = ([element anchorPoint].x - 0.5f) * [element boundary].size.width;
+    double yOffset = ([element anchorPoint].y - 0.5f) * [element boundary].size.height;
+    CGPoint offsetAP = CGPointMake(xOffset, yOffset);
+    
+    CGPoint p = CGPointMake([element position].x + offsetAP.x, 
+                            [element position].y + offsetAP.y);//[element position];
     CGRect r = [element boundary];
     
     float ratio = [Box2DHelper pixelsToMeterRatio];
