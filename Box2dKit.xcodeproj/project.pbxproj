@@ -162,7 +162,6 @@
 		0ACB9A7F14E2FE3A00528DE7 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB9A7E14E2FE3A00528DE7 /* blocks.png */; };
 		0ACB9A8A14E2FE6E00528DE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACB98A514E2FE3600528DE7 /* Foundation.framework */; };
 		0ACB9A9014E2FE6E00528DE7 /* box2dModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB9A8F14E2FE6E00528DE7 /* box2dModule.mm */; };
-		0ACB9A9714E2FEA900528DE7 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB9A9614E2FEA900528DE7 /* Config.xcconfig */; };
 		0ACB9A9C14E2FF9700528DE7 /* MyContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ACB9A9A14E2FF9700528DE7 /* MyContactListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0ACB9A9D14E2FF9700528DE7 /* MyContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB9A9B14E2FF9700528DE7 /* MyContactListener.mm */; };
 		0ACB9A9E14E2FF9700528DE7 /* MyContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB9A9B14E2FF9700528DE7 /* MyContactListener.mm */; };
@@ -1232,7 +1231,7 @@
 		0ACB988C14E2FE3600528DE7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 0ACB988F14E2FE3600528DE7 /* Build configuration list for PBXProject "Box2dKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1267,7 +1266,6 @@
 				0ACB98BA14E2FE3600528DE7 /* Icon@2x.png in Resources */,
 				0ACB98BD14E2FE3600528DE7 /* iTunesArtwork in Resources */,
 				0ACB9A7F14E2FE3A00528DE7 /* blocks.png in Resources */,
-				0ACB9A9714E2FEA900528DE7 /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1480,6 +1478,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Box2dKit/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Box2dKit/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1496,6 +1495,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Box2dKit/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Box2dKit/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
