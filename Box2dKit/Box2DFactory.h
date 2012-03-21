@@ -18,6 +18,6 @@
 + (Box2DObject *) generateB2DBody:(NSObject<Box2DPhysicsProtocol> *) element;
 //+ (void) generateB2DBodyForTongue:(MCTongue *) tongue;
 
-+ (void) destroyB2DBody:(NSObject<Box2DPhysicsProtocol> *) element;
++ (void) destroyB2DBody:(Box2DObject *) b2dObj;
 
 @end
