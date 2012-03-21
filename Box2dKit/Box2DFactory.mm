@@ -104,4 +104,9 @@ static b2World *world;
     return b2dObj;
         
 }
+- (void) destroyB2DBody:(Box2DObject *) b2dObj {
+    
+    world->DestroyBody([b2dObj body]);
+    
+}
 @end
