@@ -14,5 +14,6 @@
 - (CGPoint) position;
 - (CGRect) boundingBox;
 - (CGPoint) anchorPoint;
+- (NSString *) name;
 
 @end
