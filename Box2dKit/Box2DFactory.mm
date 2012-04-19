@@ -69,7 +69,12 @@ static b2World *world;
     
     b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
-    
+
+    NSString *oName = [element objectName];
+    CGRect elementRect = [element boundingBox];
+    NSLog(@"Object[%@] has bounding box %@", oName, NSStringFromCGRect(elementRect));
+        
+    // We can possibly delete this 2.0 division.
     double xOffset = ([element anchorPoint].x - 0.5f) * [element boundingBox].size.width/2.0;
     double yOffset = ([element anchorPoint].y - 0.5f) * [element boundingBox].size.height/2.0;
     CGPoint offsetAP = CGPointMake(xOffset, yOffset);
@@ -85,8 +90,8 @@ static b2World *world;
     b2Body *body = world->CreateBody(&bodyDef);
     
     b2PolygonShape dynamicBox;
-    float dboxWidth = r.size.width/ratio/2.0;
-    float dboxHeight = r.size.height/ratio/2.0;
+    float dboxWidth = r.size.width/ratio;
+    float dboxHeight = r.size.height/ratio;
     dynamicBox.SetAsBox(dboxWidth, dboxHeight);
 	
     b2FixtureDef fixtureDef;
