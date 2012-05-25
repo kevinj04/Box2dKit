@@ -17,6 +17,9 @@
 /** converts a box2d position to PIXEL coordinates */
 +(CGPoint) toPixels:(b2Vec2)vec;
 
+/** returns the points-to-meter ratio */
++ (float) pointsToMeterRatio;
+
 /** returns the pixels-to-meter ratio scaled to the device's pixel size */
 +(float) pixelsToMeterRatio;
 

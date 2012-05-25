@@ -70,9 +70,9 @@ static b2World *world;
     b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 
-    NSString *oName = [element objectName];
-    CGRect elementRect = [element boundingBox];
-    NSLog(@"Object[%@] has bounding box %@", oName, NSStringFromCGRect(elementRect));
+    //NSString *oName = [element objectName];
+    //CGRect elementRect = [element boundingBox];
+    //NSLog(@"Object[%@] has bounding box %@ and position", oName, NSStringFromCGRect(elementRect), NSStringFromCGPoint([element position]));
         
     // We can possibly delete this 2.0 division.
     double xOffset = ([element anchorPoint].x - 0.5f) * [element boundingBox].size.width/2.0;
@@ -81,17 +81,21 @@ static b2World *world;
     
     CGPoint p = CGPointMake([element position].x - offsetAP.x, 
                             [element position].y - offsetAP.y);//[element position];
+    //CGRect r = [element boundingBox];
+    
+    // new change
     CGRect r = [self scaleRectFromIPad:[element boundingBox]];
     
-    float ratio = [Box2DHelper pixelsToMeterRatio];
+    float ratio = [Box2DHelper pointsToMeterRatio];
+    float pxRatio = [Box2DHelper pixelsToMeterRatio];
     
 	bodyDef.position.Set(p.x/ ratio, p.y/ ratio);
 	bodyDef.userData = element;
     b2Body *body = world->CreateBody(&bodyDef);
     
     b2PolygonShape dynamicBox;
-    float dboxWidth = r.size.width/ratio;
-    float dboxHeight = r.size.height/ratio;
+    float dboxWidth = r.size.width/pxRatio; // rect dimensions are in pixels?
+    float dboxHeight = r.size.height/pxRatio; // rect dimensions are in pixels?
     dynamicBox.SetAsBox(dboxWidth, dboxHeight);
 	
     b2FixtureDef fixtureDef;
